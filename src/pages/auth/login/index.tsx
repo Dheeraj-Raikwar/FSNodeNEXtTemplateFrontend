@@ -100,6 +100,10 @@ const Login: NextPage<Props> = (props) => {
 
 	};
 
+	const handleForgotPasswordClick = () => {
+		setIsForgotPasswordModalOpen(true);
+	};
+
 	const handleForgotPasswordClose = () => {
 		setIsForgotPasswordModalOpen(false);
 	};
@@ -185,7 +189,7 @@ const Login: NextPage<Props> = (props) => {
 						</div>
 					</form>
 
-					{/* <p className='flex justify-end text-xs mt-2 cursor-pointer text-gray-100' onClick={handleForgotPasswordClick}>Forgot Password</p> */}
+					<p className='flex justify-end text-xs mt-2 cursor-pointer text-gray-100' onClick={handleForgotPasswordClick}>Forgot Password</p>
 					{/* Forgot Password Modal pop up */}
 					<div>
 						<AUModal open={isForgotPasswordModalOpen} onClose={handleForgotPasswordClose} title="Forgot Password" size={'lg'}>
